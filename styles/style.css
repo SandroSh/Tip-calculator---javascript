@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+.main-container .calculator-container .calculation-box .row-1, .main-container .calculator-container .calculation-box .row-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 15px;
+  height: 20px;
+}
+
+.active-button {
+  color: #00494d !important;
+  background-color: #26c0ab !important;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container h1 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 100px;
+  font-family: "Space mono", monospace;
+  font-weight: 700;
+  color: #7f9c9f;
+}
+
+.main-container .calculator-container {
+  margin-top: -50px;
+  border-radius: 30px;
+  background-color: #fff;
+  width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
+  padding: 30px;
+}
+
+.main-container .calculator-container .calculation-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 25% 50% 25%;
+      grid-template-rows: 25% 50% 25%;
+}
+
+.main-container .calculator-container .calculation-box .row-1 #bills {
+  position: relative;
+}
+
+.main-container .calculator-container .calculation-box .row-1 #bills img {
+  position: absolute;
+  top: 31%;
+  left: 10px;
+}
+
+.main-container .calculator-container .calculation-box .row-1 label {
+  margin-bottom: 10px;
+}
+
+.main-container .calculator-container .calculation-box .row-2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .calculator-container .calculation-box .row-2 .buttons-box {
+  margin-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  grid-row-gap: 7px;
+  grid-column-gap: 10px;
+}
+
+.main-container .calculator-container .calculation-box .row-2 .buttons-box button {
+  font-family: "Space mono", monospace;
+  height: 50px;
+  border-style: none;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #00494d;
+  color: white;
+  border-radius: 3px;
+}
+
+.main-container .calculator-container .calculation-box .row-2 .buttons-box input {
+  width: 100%;
+  height: 50px;
+  border-style: none;
+  background-color: #c5e4e7;
+  text-align: center;
+  font-family: "Space mono", monospace;
+  font-weight: 900;
+  font-size: 20px;
+  color: #00494d;
+}
+
+.main-container .calculator-container .calculation-box .row-3 {
+  margin-bottom: 25px;
+}
+
+.main-container .calculator-container .calculation-box .row-3 label {
+  font-size: 16px;
+}
+
+.main-container .calculator-container .calculation-box .row-3 #quantity {
+  position: relative;
+}
+
+.main-container .calculator-container .calculation-box .row-3 #quantity input {
+  margin-top: 10px;
+}
+
+.main-container .calculator-container .calculation-box .row-3 #quantity img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 45%;
+  left: 10px;
+}
+
+.main-container .calculator-container .calculation-box .row-3 #quantity .error-message {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  color: red;
+  font-family: "Space-mono", monospace;
+  font-weight: 700;
+  visibility: hidden;
+}
+
+.main-container .calculator-container .calculation-box label {
+  color: gray;
+  font-size: 18px;
+  font-family: "Space mono", monospace;
+  font-weight: 700;
+}
+
+.main-container .calculator-container .result {
+  border-radius: 20px;
+  background-color: #00494d;
+  padding: 30px;
+}
+
+.main-container .calculator-container .result h3 {
+  color: white;
+  font-family: "Space mono", monospace;
+  font-weight: 900;
+}
+
+.main-container .calculator-container .result p {
+  color: gainsboro;
+  font-family: "space mono", monospace;
+  font-weight: 900;
+}
+
+.main-container .calculator-container .result .result-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-container .calculator-container .result h1 {
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+.main-container .calculator-container .result button {
+  width: 100%;
+  margin: 0 auto;
+  border-style: none;
+  font-size: 15px;
+  background-color: #26c0ab;
+  color: #00494d;
+  height: 30px;
+  font-family: "Space mono", monospace;
+  font-weight: 900;
+  border-radius: 3px;
+}
+
+#bills-text, #people-num {
+  width: 100%;
+  height: 50px;
+  border-style: none;
+  background-color: #e6ffff;
+  border-radius: 7px;
+  font-size: 20px;
+  color: #00494d;
+  direction: rtl;
+  outline: none;
+  padding: 14px;
+  font-weight: 900;
+}
+
+#bills-text:focus, #people-num:focus {
+  border: 2px solid #26c0ab;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1047px) {
+  .main-container {
+    overflow-x: hidden;
+    height: 170vh;
+    overflow: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .calculator-container {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    grid-row-gap: 100px !important;
+    width: 400px;
+  }
+}
+
+@media (max-width: 770px) {
+  .calculator-container {
+    width: 100vw !important;
+  }
+  .error-message {
+    top: 80px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

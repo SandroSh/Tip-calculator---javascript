@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+
+
+
+%disp-flex{
+    display: flex;
+    flex-direction: column;
+
+}
+*{  
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+img{
+    width: 15px;
+    height: 20px;
+}
+.active-button{
+    color:hsl(183, 100%, 15%) !important;
+    background-color: hsl(172, 67%, 45%) !important;
+}
+.main-container{
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+    background-color: hsl(185, 41%, 84%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h1{
+        justify-content: flex-start;
+        margin-bottom: 100px; 
+        font-family: "Space mono", monospace;  
+        font-weight: 700;
+        color:hsl(184, 14%, 56%);
+    }
+    .calculator-container{
+        margin-top:-50px;
+        border-radius: 30px;
+        background-color: #fff;
+        width: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 0px;
+        padding: 30px;
+        .calculation-box{
+            
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 25% 50% 25%;
+           
+            
+            
+            .row-1{
+                @extend %disp-flex;
+                #bills{ 
+                   position:relative;
+
+                   img{
+                       position: absolute;
+                       top:31%;
+                       left:10px;
+                   }
+                   
+                           
+                   
+                }
+                label{
+                    margin-bottom:10px;
+                }
+              
+            }
+            
+            .row-2{
+                @extend %disp-flex;
+                justify-content: center;
+                
+                
+                .buttons-box{
+                    margin-top:10px;
+                    display: grid;
+                
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 50% 50%;
+                    
+                    grid-row-gap: 7px;
+                    grid-column-gap: 10px;
+                    
+                    
+
+                    button{
+                        font-family: "Space mono", monospace;
+                        height: 50px;
+                        border-style: none;
+                        font-weight: 700;
+                        font-size: 20px;
+                        background-color:hsl(183, 100%, 15%);
+                        color:white;
+                        border-radius: 3px;
+                       
+                    }
+                    input{
+                        width: 100%;
+                        height: 50px;
+                        border-style:none;
+                        background-color: hsl(185, 41%, 84%);
+                        text-align: center;
+                        font-family: "Space mono", monospace;
+                        font-weight: 900;
+                        font-size: 20px;
+                        color:hsl(183, 100%, 15%);
+                    }
+                }
+            }
+            
+            .row-3{
+                margin-bottom:25px;
+                label{
+                    font-size:16px;
+                    
+                }
+                #quantity{
+                    position:relative;
+                    input{
+                        margin-top:10px;
+                    }
+                    img{
+                        width: 15px;
+                        height: 15px;
+                        position: absolute;
+                        top:45%;
+                        left:10px;
+
+                    }
+                    .error-message{
+                        position:absolute;
+                        right: 0;
+                        top:-20px;
+                        color: red;
+                        font-family: "Space-mono", monospace;
+                        font-weight: 700;
+                        visibility: hidden;
+                    }
+                }
+               
+                
+            }
+            
+            
+            label{
+                color:gray;
+                font-size: 18px;     
+                font-family: "Space mono", monospace;  
+                font-weight: 700;
+               
+              
+            }
+
+        }
+        
+        .result{
+            
+            
+            border-radius: 20px;
+            background-color:hsl(183, 100%, 15%);
+            padding:30px;
+            h3{
+                color: white;
+                font-family: "Space mono", monospace;
+                font-weight:900;
+            }
+            p{
+                color:gainsboro;
+                font-family: "space mono", monospace;
+                font-weight:900;
+            }
+            .result-boxes{
+                display: flex;
+                justify-content: space-between;
+                align-items:flex-start;
+            }
+            h1{
+                color:hsl(172, 67%, 45%);
+                font-weight: 700;
+
+            }
+            
+            button{
+                width: 100%;
+                margin:0 auto;
+                border-style: none;
+                font-size:15px;
+                background-color: hsl(172, 67%, 45%);
+                color:hsl(183, 100%, 15%);
+                height: 30px;
+                font-family: "Space mono", monospace;
+                font-weight:900;
+                border-radius: 3px;
+                
+            }
+
+        }
+        
+    }
+}
+
+#bills-text, #people-num{
+    width: 100%;
+    height: 50px;
+    border-style: none;
+    background-color: hsl(180, 100%, 95%);
+    border-radius: 7px;
+    font-size:20px;
+    color:hsl(183, 100%, 15%);
+    direction: rtl;
+    outline: none;
+    padding:14px;
+    font-weight: 900;
+    &:focus{
+        border: 2px solid hsl(172, 67%, 45%);
+    }
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+}
+
+@media (max-width:1047px) {
+    .main-container{
+        overflow-x:hidden;
+        height: 170vh;
+        overflow:unset;
+        justify-content:flex-start;
+    }
+    
+    .calculator-container{
+        grid-template-columns: 1fr !important;
+        grid-row-gap:100px !important;
+        width: 400px;
+       
+    }   
+   
+}
+@media (max-width:770px) {
+    .calculator-container{
+        width: 100vw !important;
+    } 
+    .error-message{
+        top:80px !important;
+    }
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/tip.ico">
+</head>
+<body>
+    <div class="main-container">
+                <h1>Tip Calculator</h1>
+
+                <div class="calculator-container">
+                    <div class="calculation-box">
+                        <div class="row-1">
+                            <label for="input">Bill</label>
+                            <div  id="bills">
+                                <input type="number" name="number" id="bills-text">
+                                <img src="images/icon-dollar.svg" alt="icon-img">
+                            </div>
+                            
+                        </div>
+
+                        <div class="row-2">
+                            <label for="buttons">Select Tip %</label>
+                            <div class="buttons-box">
+                                
+                                <button  class="percent-buttons" >5%</button>
+                                <button class="percent-buttons"  >7%</button>
+                                <button class="percent-buttons active-button">10%</button>
+                                <button  class="percent-buttons" >15%</button>
+                                <button class="percent-buttons" >50%</button>
+                                
+                                <input type="number" name="cunstomPercent" id="custom-percent" placeholder="Custom">
+
+                            </div>
+                             
+                            
+                        </div>
+
+                        <div class="row-3">
+                            <label for="people">Number of People</label>
+                            <div id="quantity">
+
+                                <input type="number" name="quantity-of-people" id="people-num" style="height:50px">
+                                <img src="images/icon-person.svg" alt="person icon">
+                                <p class="error-message">Can't be Zero</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="result">
+                            <div class="result-boxes">
+                                <div class="person-tax">
+                                        <h3>Tip Amount</h3>
+                                        <p>/Person</p>
+                                </div>
+                                <h1>$<span class="tax" id="person-tax">0.00</span></h1>
+                            </div>
+
+                            <div class="result-boxes">
+                                <div class="person-tax">
+                                        <h3>Total</h3>
+                                        <p>/ <span id="people-num-min">0</span> Person</p>
+                                </div>
+                                <h1>$<span class="tax" id="people-tax">0.00</span></h1>
+                            </div>
+
+                            <button type="reset" id="reset-btn">RESET</button>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
