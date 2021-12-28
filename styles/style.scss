@@ -23,6 +23,12 @@ img{
     color:hsl(183, 100%, 15%) !important;
     background-color: hsl(172, 67%, 45%) !important;
 }
+input:focus{
+    caret-color:hsl(180, 100%, 95%) ;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color:rgb(180, 180, 180);
+  }
 .main-container{
     width: 100vw;
     height:100vh;
@@ -44,7 +50,7 @@ img{
         margin-top:-50px;
         border-radius: 30px;
         background-color: #fff;
-        width: 700px;
+        width: 800px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -67,7 +73,7 @@ img{
                    img{
                        position: absolute;
                        top:31%;
-                       left:10px;
+                       right:10px;
                    }
                    
                            
@@ -75,6 +81,12 @@ img{
                 }
                 label{
                     margin-bottom:10px;
+                }
+                .error-message-2{
+                    color: red;
+                    font-family: "Space-mono", monospace;
+                    font-weight: 700;
+                    visibility: hidden;
                 }
               
             }
@@ -137,13 +149,13 @@ img{
                         height: 15px;
                         position: absolute;
                         top:45%;
-                        left:10px;
+                        right:10px;
 
                     }
                     .error-message{
                         position:absolute;
-                        right: 0;
-                        top:-20px;
+                        right: 10px;
+                        bottom:-25px;
                         color: red;
                         font-family: "Space-mono", monospace;
                         font-weight: 700;
@@ -176,6 +188,7 @@ img{
                 color: white;
                 font-family: "Space mono", monospace;
                 font-weight:900;
+                font-size: 14px;
             }
             p{
                 color:gainsboro;
@@ -204,6 +217,12 @@ img{
                 font-family: "Space mono", monospace;
                 font-weight:900;
                 border-radius: 3px;
+              
+                &:hover{
+                    background-color: white;
+                     
+                    
+                }
                 
             }
 
@@ -220,7 +239,7 @@ img{
     border-radius: 7px;
     font-size:20px;
     color:hsl(183, 100%, 15%);
-    direction: rtl;
+    
     outline: none;
     padding:14px;
     font-weight: 900;
@@ -255,8 +274,6 @@ input::-webkit-inner-spin-button {
     .calculator-container{
         width: 100vw !important;
     } 
-    .error-message{
-        top:80px !important;
-    }
+   
 }
 
